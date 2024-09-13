@@ -41,5 +41,12 @@ namespace AdminUI.Server.Controllers
             XMLCrud.EditClient(xmlFilePath, id, updatedClient);
             return Ok("Client updated successfully.");
         }
+
+        [HttpDelete("delete/{id}")]
+        public IActionResult DeleteClient(string id)
+        {
+            XMLCrud.DeleteClient(xmlFilePath, id);
+            return Ok("Client updated successfully.");
+        }
     }
 }

@@ -9,8 +9,11 @@ namespace AdminUI.Server.Helpers
         {
             var xmlDoc = XDocument.Load(xmlFilePath);
 
+            Random random = new Random();
+            int randomNumber = random.Next();
+
             XElement newClientElement = new XElement("Client",
-            new XAttribute("ID", newClient.ID),
+            new XAttribute("ID", random),
                 new XElement("ReceiverEmail", newClient.ReceiverEmail),
                 new XElement("FirstName", newClient.FirstName),
                 new XElement("LastName", newClient.LastName),
@@ -45,6 +48,27 @@ namespace AdminUI.Server.Helpers
             }
 
             xmlDoc.Save(xmlFilePath);
+        }
+        public static void DeleteClient(string xmlFilePath, string id)
+        {
+            // Load the XML document
+            var xmlDoc = XDocument.Load(xmlFilePath);
+
+            // Find the client with the specified ID
+            var client = xmlDoc.Root.Elements("Client")
+                .FirstOrDefault(c => c.Attribute("ID")?.Value == id);
+
+            // If the client is found, remove it from the XML
+            if (client != null)
+            {
+                client.Remove();
+                xmlDoc.Save(xmlFilePath);
+            }
+            else
+            {
+                // Optional: Handle case where the client was not found
+                Console.WriteLine($"Client with ID {id} not found.");
+            }
         }
     }
 }
