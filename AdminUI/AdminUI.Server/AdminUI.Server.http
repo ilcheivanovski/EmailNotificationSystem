@@ -1,0 +1,6 @@
+@AdminUI.Server_HostAddress = http://localhost:5107
+
+GET {{AdminUI.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

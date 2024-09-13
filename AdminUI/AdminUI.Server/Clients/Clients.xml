@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Clients>
+  <Client ID="12345">
+    <ReceiverEmail>ilcheivanovski@gmail.com</ReceiverEmail>
+    <FirstName>John</FirstName>
+    <LastName>Doe</LastName>
+    <PlainTextContent>This is the plain text content.</PlainTextContent>
+    <Template Id="1">
+      <Name>Template1.html</Name>
+      <MarketingData>{"title": "Sale", "discount": "20%"}</MarketingData>
+    </Template>
+  </Client>
+  <Client ID="54321">
+    <ReceiverEmail>ilce.ivanovski@gmail.com</ReceiverEmail>
+    <FirstName>Jane</FirstName>
+    <LastName>Smith</LastName>
+    <PlainTextContent>Another plain text content.</PlainTextContent>
+    <Template Id="2">
+      <Name>Template2.html</Name>
+      <MarketingData>{"title": "New Arrivals", "items": ["Shoes", "Bags"]}</MarketingData>
+    </Template>
+  </Client>
+  <Client ID="string">
+    <ReceiverEmail>3</ReceiverEmail>
+    <FirstName>4</FirstName>
+    <LastName>5</LastName>
+    <PlainTextContent>6</PlainTextContent>
+    <Template Id="7">
+      <Name>8</Name>
+      <MarketingData>9</MarketingData>
+    </Template>
+  </Client>
+  <Client ID="string">
+    <ReceiverEmail>string</ReceiverEmail>
+    <FirstName>string</FirstName>
+    <LastName>string</LastName>
+    <PlainTextContent>string</PlainTextContent>
+    <Template Id="string">
+      <Name>string</Name>
+      <MarketingData>string</MarketingData>
+    </Template>
+  </Client>
+</Clients>
